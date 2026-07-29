@@ -1,1 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background: #090B10;
+    color: #F5F7FA;
+    line-height: 1.7;
+}
+
+nav {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(9,11,16,.75);
+}
+
+nav h2 {
+    color: #A855F7;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #A855F7;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        radial-gradient(circle at top,
+        rgba(124,92,255,.35),
+        transparent 55%);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(124,92,255,.15);
+    color: #C4B5FD;
+    border: 1px solid rgba(124,92,255,.4);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #C8D4FF;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.buttons a {
+    padding: 14px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.primary {
+    background: #7C5CFF;
+    color: white;
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 1px solid #555;
+    color: white;
+}
+
+.secondary:hover {
+    border-color: #7C5CFF;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 90px 20px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    padding: 22px;
+    margin-top: 18px;
+    backdrop-filter: blur(8px);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #7C5CFF;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+@media (max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:16px;
+}
+
+nav div{
+    display:flex;
+    gap:16px;
+}
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+}
