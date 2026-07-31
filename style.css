@@ -623,3 +623,82 @@ transform:translateY(0px);
 }
 
 }
+/* ==========================
+   TRANSMISSION COUNTDOWN
+========================== */
+
+.countdown-card{
+    margin:40px auto;
+    padding:30px;
+    max-width:760px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(168,85,247,.20);
+    border-radius:24px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 0 35px rgba(168,85,247,.12);
+}
+
+#countdown{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin:28px 0;
+}
+
+.time-box{
+    width:90px;
+    padding:18px 12px;
+    border-radius:18px;
+    background:rgba(168,85,247,.08);
+    border:1px solid rgba(168,85,247,.15);
+    transition:.25s ease;
+}
+
+.time-box:hover{
+    transform:translateY(-4px) scale(1.03);
+    border-color:#A855F7;
+    box-shadow:0 0 24px rgba(168,85,247,.35);
+}
+
+.time-box span{
+    display:block;
+    font-size:2.2rem;
+    font-weight:700;
+    color:#fff;
+    text-shadow:
+        0 0 8px rgba(168,85,247,.55),
+        0 0 18px rgba(168,85,247,.35);
+}
+
+.time-box small{
+    display:block;
+    margin-top:6px;
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    opacity:.7;
+}
+
+#launch-status{
+    margin-top:15px;
+    line-height:1.6;
+    opacity:.9;
+}
+
+@media(max-width:768px){
+
+    .countdown-card{
+        padding:24px;
+    }
+
+    .time-box{
+        width:75px;
+        padding:15px 10px;
+    }
+
+    .time-box span{
+        font-size:1.7rem;
+    }
+
+}
