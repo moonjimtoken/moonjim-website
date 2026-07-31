@@ -56,33 +56,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (distance <= 0) {
 
-                clearInterval(timer);
+    clearInterval(timer);
 
-                countdown.innerHTML = `
-                    <div style="width:100%;text-align:center;">
-                        <h2 style="color:#A855F7;">
-                            🟢 MISSION STATUS: LIVE
-                        </h2>
+    const CA = "DhDeXiejye25wzGrQfb7hLFkpfzHro3K4Z9TWi4Gpump";
 
-                        <p>
-                            Contract Address Successfully Transmitted
-                        </p>
-                    </div>
-                `;
+    countdown.innerHTML = `
+        <div class="launch-reveal">
 
-                const status = document.getElementById("launch-status");
+            <h2 style="color:#A855F7;">
+                📡 COORDINATES RECEIVED
+            </h2>
 
-                if (status) {
+            <p style="opacity:.8;margin-bottom:20px;">
+                Transmission complete.
+            </p>
 
-                    status.innerHTML = `
-                        🚀 Official CA available now in Telegram.
-                    `;
+            <div id="caBox" class="ca-box">
+                ${CA}
+            </div>
 
-                }
+            <button id="copyCA">
+                📋 Copy Coordinates
+            </button>
 
-                return;
+        </div>
+    `;
 
-            }
+    document.getElementById("copyCA").addEventListener("click", () => {
+
+        navigator.clipboard.writeText(CA);
+
+        const btn = document.getElementById("copyCA");
+
+        btn.textContent = "✅ Copied";
+
+        setTimeout(() => {
+            btn.textContent = "📋 Copy Coordinates";
+        },2000);
+
+    });
+
+    const status = document.getElementById("launch-status");
+
+    if(status){
+
+        status.innerHTML = "🛰️ Transmission successful.";
+
+    }
+
+    return;
+
+}
 
             document.getElementById("days").textContent =
                 Math.floor(distance / (1000 * 60 * 60 * 24));
