@@ -109,3 +109,52 @@ const timer = setInterval(() => {
         Math.floor((distance % (1000 * 60)) / 1000);
 
 }, 1000);
+/* ==========================
+   TRANSMISSION COUNTDOWN
+========================== */
+
+const countdown = document.getElementById("countdown");
+
+if (countdown) {
+
+    const launchDate = new Date("2026-07-31T12:00:00-07:00").getTime();
+
+    const timer = setInterval(() => {
+
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        if (distance <= 0) {
+
+            clearInterval(timer);
+
+            countdown.innerHTML = `
+                <div style="text-align:center;width:100%;">
+                    <h2 style="color:#A855F7;">🟢 MISSION STATUS: LIVE</h2>
+                    <p>Contract Address has been transmitted.</p>
+                </div>
+            `;
+
+            const status = document.getElementById("launch-status");
+            if (status) {
+                status.innerHTML = "🚀 Check Telegram for the official CA.";
+            }
+
+            return;
+        }
+
+        document.getElementById("days").textContent =
+            Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        document.getElementById("hours").textContent =
+            Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        document.getElementById("minutes").textContent =
+            Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("seconds").textContent =
+            Math.floor((distance % (1000 * 60)) / 1000);
+
+    }, 1000);
+
+}
