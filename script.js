@@ -1,33 +1,34 @@
-const loader = document.getElementById("loader");
+document.addEventListener("DOMContentLoaded", () => {
 
-const messages = [
-    "📡 Incoming Transmission...",
-    "🛰️ Scanning orbit...",
-    "👨‍🚀 Crew verified...",
-    "🚀 Launch authorization received...",
-    "🌙 WELCOME, ASTRONAUT."
-];
+    const loader = document.getElementById("loader");
+    const text = document.querySelector(".loader-content p");
 
-const text = document.querySelector(".loader-content p");
+    const messages = [
+        "📡 Incoming Transmission...",
+        "🛰️ Scanning orbit...",
+        "👨‍🚀 Crew verified...",
+        "🚀 Launch authorization received...",
+        "🌙 WELCOME, ASTRONAUT."
+    ];
 
-let i = 0;
+    let i = 0;
 
-const interval = setInterval(() => {
+    const interval = setInterval(() => {
 
-    i++;
+        i++;
 
-    if(i < messages.length){
+        if (i < messages.length) {
+            text.textContent = messages[i];
+        }
 
-        text.textContent = messages[i];
+    }, 700);
 
-    }
+    setTimeout(() => {
 
-},700);
+        clearInterval(interval);
 
-setTimeout(() => {
+        loader.classList.add("hidden");
 
-    clearInterval(interval);
+    }, 3500);
 
-    loader.classList.add("hidden");
-
-},3500);
+});
