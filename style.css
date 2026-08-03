@@ -462,6 +462,15 @@ z-index:9999;
 transition:.8s;
 
 }
+#loader.hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
 
 .loader-content{
 
