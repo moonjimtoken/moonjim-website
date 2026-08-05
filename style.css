@@ -112,6 +112,18 @@ nav a:hover{
 
 }
 
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
 .hero-logo img{
 
 width:100px;
@@ -142,22 +154,13 @@ transform:translateY(0);
     box-shadow:0 0 45px rgba(122,88,255,.45);
 
 }
-.hero-image{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    position:relative;
-
-}
 .hero-image img{
 
     width:100%;
 
-    max-width:480px;
+    max-width:520px;
+       transform:rotate(-2deg);
+       
 
     border-radius:24px;
 
