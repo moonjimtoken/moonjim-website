@@ -1,5 +1,5 @@
 /* ==========================
-   MOONJIM TEMPORARY V2
+   MOONJIM TEMPORARY V3
 ========================== */
 
 *{
@@ -682,5 +682,22 @@ order:-1;
 max-width:340px;
 
 }
+
+}
+
+.mission-file{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(168,85,247,.12);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(16px);
+
+    padding:70px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35);
 
 }
